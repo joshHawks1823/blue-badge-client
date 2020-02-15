@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import APIURL from "../helpers/enviroment";
 
 const InventoryCreate = props => {
   const [inventoryData, setInventoryData] = useState("");
@@ -7,7 +8,7 @@ const InventoryCreate = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    fetch("http://localhost:4000/inventory/create", {
+    fetch(`${APIURL}/inventory/create`, {
       method: "POST",
       body: JSON.stringify({
         inventory: {

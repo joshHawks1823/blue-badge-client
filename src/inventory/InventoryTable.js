@@ -1,5 +1,6 @@
 import React from "react";
 import { Table, Button } from "reactstrap";
+import APIURL from "../helpers/enviroment";
 
 // const InventoryTable = props => {
 //   const deleteInventory = inventory => {
@@ -60,7 +61,7 @@ import { Table, Button } from "reactstrap";
 
 const InventoryTable = props => {
   const deleteInventory = inventory => {
-    fetch(`http://localhost:4000/inventory/delete/${inventory.id}`, {
+    fetch(`${APIURL}/inventory/delete/${inventory.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",

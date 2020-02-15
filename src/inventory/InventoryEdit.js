@@ -10,6 +10,8 @@ import {
   Input
 } from "reactstrap";
 
+import APIURL from "../helpers/enviroment";
+
 const InventoryEdit = props => {
   const [editData, setEditData] = useState(
     props.inventoryToUpdate.inventoryData
@@ -20,22 +22,19 @@ const InventoryEdit = props => {
 
   const inventoryUpdate = event => {
     event.preventDefault();
-    fetch(
-      `http://localhost:4000/inventory/update/${props.inventoryToUpdate.id}`,
-      {
-        method: "PUT",
-        body: JSON.stringify({
-          inventory: {
-            inventoryData: editData,
-            inventoryCount: editCount
-          }
-        }),
-        headers: new Headers({
-          "Content-Type": "application/json",
-          Authorization: props.token
-        })
-      }
-    ).then(res => {
+    fetch(`http:///inventory/update/${props.inventoryToUpdate.id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        inventory: {
+          inventoryData: editData,
+          inventoryCount: editCount
+        }
+      }),
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Authorization: props.token
+      })
+    }).then(res => {
       props.fetchInventory();
       props.updateOff();
     });

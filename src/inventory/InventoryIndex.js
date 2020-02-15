@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import InventoryCreate from "./InventoryCreate";
 import InventoryTable from "./InventoryTable";
 import InventoryEdit from "./InventoryEdit";
+import APIURL from "../helpers/enviroment";
 
 const InventoryIndex = props => {
   const [inventory, setInventory] = useState([]);
@@ -22,7 +23,7 @@ const InventoryIndex = props => {
   };
 
   const fetchInventory = () => {
-    fetch("http://localhost:4000/inventory/getall", {
+    fetch(`${APIURL}/inventory/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
