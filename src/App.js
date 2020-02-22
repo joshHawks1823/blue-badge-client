@@ -26,15 +26,17 @@ function App() {
 
   const protectedViews = () => {
     return sessionToken === localStorage.getItem("token") ? (
-      <InventoryIndex token={sessionToken} />
+      <InventoryIndex clickLogout={clearToken} token={sessionToken} />
     ) : (
       <Auth updateToken={updateToken} />
+      // <Login updateToken={updateToken} />
     );
   };
 
   return (
     <div>
-      <Sitebar clickLogout={clearToken} />
+      <h1 className="title-margin">KDP Overstock Inventory</h1>
+      {/* <Sitebar clickLogout={clearToken} /> */}
       {protectedViews()}
     </div>
   );

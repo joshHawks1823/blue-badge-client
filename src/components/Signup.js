@@ -32,35 +32,35 @@ const Signup = props => {
 
   return (
     <Container className="formApp">
+      <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
       <h2>Sign Up</h2>
       <Form className="form" onSubmit={handleSubmit}>
-        <Col>
-          <FormGroup>
-            <Label htmlFor="username">Username</Label>
-            <Input
-              onChange={e => setUsername(e.target.value)}
-              name="username"
-              placeholder="email@email.com"
-              type="email"
-              id="email"
-              value={username}
-            />
-          </FormGroup>
-        </Col>
-        <Col>
-          <FormGroup>
-            <Label htmlFor="password">Password</Label>
-            <Input
-              minLength="6"
-              onChange={e => setPassword(e.target.value)}
-              name="password"
-              placeholder="password"
-              type="password"
-              id="password"
-              value={password}
-            />
-          </FormGroup>
-        </Col>
+        <FormGroup>
+          <Label htmlFor="username">Username</Label>
+          <Input
+            minLength="6"
+            onChange={e => setUsername(e.target.value)}
+            name="username"
+            placeholder="email@email.com"
+            type="email"
+            id="email"
+            value={username}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label htmlFor="password">Password</Label>
+          <Input
+            minLength="6"
+            onChange={e => setPassword(e.target.value)}
+            name="password"
+            placeholder="password"
+            type="password"
+            id="password"
+            value={password}
+          />
+        </FormGroup>
+
         <Button type="submit" className="btn btn-primary btn-block">
           Signup
         </Button>

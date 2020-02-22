@@ -22,7 +22,7 @@ const InventoryEdit = props => {
 
   const inventoryUpdate = event => {
     event.preventDefault();
-    fetch(`http:///inventory/update/${props.inventoryToUpdate.id}`, {
+    fetch(`${APIURL}/inventory/update/${props.inventoryToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         inventory: {
@@ -61,7 +61,9 @@ const InventoryEdit = props => {
               onChange={e => setEditCount(e.target.value)}
             />
           </FormGroup>
-          <Button type="submit">Update the Inventory</Button>
+          <Button className="modal-btn" type="submit">
+            Update the Inventory
+          </Button>
         </Form>
       </ModalBody>
     </Modal>

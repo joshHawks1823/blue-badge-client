@@ -32,7 +32,7 @@ const InventoryCreate = props => {
 
   return (
     <>
-      <h3>Log A Product To Inventory</h3>
+      <h3 className="logProduct">Log A Product To Inventory</h3>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="Product">Product Name:</Label>
@@ -44,7 +44,7 @@ const InventoryCreate = props => {
           />
         </FormGroup>
         <FormGroup>
-          <Label htmlFor="inventoryCount">#</Label>
+          <Label htmlFor="inventoryCount">Pallet Count:</Label>
           <Input
             placeholder="e.g. 8"
             name="inventoryCount"
@@ -52,7 +52,9 @@ const InventoryCreate = props => {
             onChange={e => setInventoryCount(e.target.value)}
           />
         </FormGroup>
-        <Button type="submit">Submit</Button>
+        <Button className="create-button" type="submit">
+          Submit
+        </Button>
       </Form>
     </>
   );

@@ -3,6 +3,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee2dc;
 }
 
 code {
