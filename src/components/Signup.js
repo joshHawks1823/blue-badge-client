@@ -17,7 +17,7 @@ const Signup = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    fetch(`http://${APIURL}api/user/createuser`, {
+    fetch(`http://${APIURL}/api/user/createuser`, {
       method: "POST",
       body: JSON.stringify({
         user: { username: username, password: password }

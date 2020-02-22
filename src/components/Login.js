@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import APIURL from "../helpers/enviroment";
 import Signup from "../components/Signup";
-import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const Login = props => {
   const [username, setUsername] = useState("");
