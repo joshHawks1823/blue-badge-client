@@ -22,7 +22,7 @@ const InventoryEdit = props => {
 
   const inventoryUpdate = event => {
     event.preventDefault();
-    fetch(`${APIURL}/inventory/update/${props.inventoryToUpdate.id}`, {
+    fetch(`http://${APIURL}/inventory/update/${props.inventoryToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         inventory: {

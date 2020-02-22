@@ -17,7 +17,7 @@ const InventoryTable = props => {
     setIsOpen(newIsOpen);
   };
   const deleteInventory = inventory => {
-    fetch(`${APIURL}/inventory/delete/${inventory.id}`, {
+    fetch(`http://${APIURL}/inventory/delete/${inventory.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",

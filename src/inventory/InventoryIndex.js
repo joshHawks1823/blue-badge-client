@@ -35,7 +35,7 @@ const InventoryIndex = props => {
   };
 
   const fetchInventory = () => {
-    fetch(`${APIURL}/inventory/getall`, {
+    fetch(`http://${APIURL}/inventory/getall`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",
