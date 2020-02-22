@@ -8,7 +8,7 @@ const InventoryCreate = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    fetch(`http://${APIURL}/inventory/create`, {
+    fetch(`https://${APIURL}/inventory/create`, {
       method: "POST",
       body: JSON.stringify({
         inventory: {
