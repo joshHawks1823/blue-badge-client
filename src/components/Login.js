@@ -9,7 +9,7 @@ const Login = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    fetch(`https://${APIURL}/api/user/signin`, {
+    fetch(`${APIURL}/api/user/createuser`, {
       method: "POST",
       body: JSON.stringify({
         user: { username: username, password: password }
